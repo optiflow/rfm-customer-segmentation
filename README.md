@@ -69,8 +69,10 @@ The resulting clusters are analyzed to understand their characteristics. This in
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    pip install pandas numpy matplotlib seaborn scikit-learn jupyterlab
+    pip install -r requirements.txt
     ```
+    The dependencies file pins **scikit-learn==1.7.0** to ensure compatibility with the
+    latest features and API.
 3.  **Download the dataset:**
     *   Obtain the `Online Retail.xlsx` file from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/online+retail).
     *   Place the `Online Retail.xlsx` file in the root directory of this repository.
