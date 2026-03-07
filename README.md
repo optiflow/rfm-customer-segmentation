@@ -8,7 +8,7 @@ This repository provides a step-by-step guide through a Jupyter Notebook, from d
 
 ## Dataset
 
-The analysis utilizes the **Online Retail Data Set** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/online+retail). This is a transnational dataset that contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
+The analysis utilizes the **Online Retail Data Set** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx). This is a transnational dataset that contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
 
 Key features used from the dataset include:
 *   `InvoiceNo`: Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction.
@@ -46,13 +46,13 @@ Once the RFM values are derived, K-Means clustering is applied to segment custom
 ### 4. Segment Interpretation
 The resulting clusters are analyzed to understand their characteristics. This involves examining the average RFM values for each segment and assigning meaningful labels (e.g., "High-Value Loyal Customers", "At-Risk Customers", "New Customers").
 
-## Key Findings/Visualizations (Example)
+## Key Findings/Visualizations
 
-*(This section would ideally be populated with actual outputs from the notebook, such as cluster plots or tables summarizing segment characteristics. Below are placeholder descriptions.)*
+This repository contains the outputs for cluster plots and segment characteristic summaries. The following visualizations and metrics are provided:
 
 *   **Elbow Method Plot:** A plot showing the sum of squared distances for different values of K, helping to identify the optimal number of clusters.
 *   **Silhouette Scores:** Provides a metric for how well-separated the clusters are.
-*   **3D Scatter Plot of RFM Clusters:** Visualizing the customer segments in a 3D space with R, F, and M as axes.
+*   **2D Scatter Plot of RFM Clusters (t-SNE):** Visualizing the customer segments in a 2D space after reducing dimensions using t-SNE.
 *   **Segment Profiles:** A table or bar charts showing the average Recency, Frequency, and Monetary values for each customer segment, highlighting their distinct characteristics. For example:
     *   **Segment 0 (Champions):** Low R, High F, High M. Your best customers.
     *   **Segment 1 (Potential Loyalists):** Recent customers with average frequency and spending.
@@ -74,8 +74,8 @@ The resulting clusters are analyzed to understand their characteristics. This in
     The dependencies file pins **scikit-learn==1.7.0** to ensure compatibility with the
     latest features and API.
 3.  **Download the dataset:**
-    *   Obtain the `Online Retail.xlsx` file from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/online+retail).
-    *   Place the `Online Retail.xlsx` file in the root directory of this repository.
+    *   Obtain the `Online Retail.xlsx` file from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx).
+    *   Place the `Online Retail.xlsx` file in the `data/` directory of this repository. Create the `data/` directory if it does not exist.
 4.  **Run the Jupyter Notebook:**
     ```bash
     jupyter lab "Customer Segmentation of Online Retail Transactions.ipynb"
